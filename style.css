@@ -1,0 +1,137 @@
+@import url(OpenSans/OpenSans.css);
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+#body {
+    text-align: center;
+    position: absolute;
+    transition: top .5s .3s;
+}
+#head {
+    font-family: Helvetica Neue, Open Sans, Helvetica, Arial;
+    font-weight: 300;
+    font-size: 3.4em;
+    margin-top: 0.5em;
+    padding: 0 20px;
+}
+#search, #sbutton {
+    display: inline-block;
+    -webkit-appearance: none;
+    margin: 0 auto;
+    outline: none !important;
+    transition: .1s;
+    border: 1px solid #ccc;
+    font-size: 1.1em;
+    padding: 9px;
+}
+#search:focus, #sbutton:focus {
+    border: 1px solid #aaa;
+    position: relative;
+    z-index: 1;
+}
+#sbutton:active {
+    box-shadow: inset #aaa 0 0 5px;
+}
+#search {
+    width: calc(100% - 80px);
+    margin-right: -3px;
+    border-radius: 4px 0 0 4px;
+    color: #444;
+}
+#sbutton {
+    cursor: pointer;
+    width: 70px;
+    margin-left: -2px;
+    border-radius: 0 4px 4px 0;
+}
+#panels {
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    max-width: 692px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    z-index: -1;
+    transition: top .5s;
+}
+@media (min-width: 692px) {
+    #panels {
+        left: calc(50% - 346px);
+    }
+}
+#panels li {
+    list-style-type: none;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background: #ccc;
+    margin: 10px;
+    font-weight: 400;
+    font-size: 1.3em;
+    padding: 0 5px;
+    vertical-align: middle;
+    cursor: pointer;
+    border: solid 1px #ccc;
+}
+body.visible #body {
+    transition: top .5s;
+    top: 0 !important;
+}
+body.visible #panels {
+    transition: top .5s .3s;
+}
+.txt {
+    display: inline-block;
+}
+
+/* List item styling */
+#panels #CNN {
+    background-image: url(logos/cnn.svg);
+    background-color: #fafafa;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#panels #BBC {
+    background-color: #090909;
+}
+#panels #BBC::after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    mask-image: url(logos/bbc.svg);
+    mask-size: 80%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-image: url(logos/bbc.svg);
+    -webkit-mask-size: 80%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    fill: red;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#panels #Wikipedia {
+    background-image: url(logos/wikipedia.svg);
+    background-color: #ececec;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#panels #TheEconomist {
+    background-image: url(logos/economist.gif);
+    background-color: #f00;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
