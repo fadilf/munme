@@ -93,45 +93,27 @@ body.visible #panels {
 }
 
 /* List item styling */
+#panels li {
+    background-repeat: no-repeat;
+    background-position: center;
+}
 #panels #CNN {
     background-image: url(logos/cnn.svg);
     background-color: #fafafa;
     background-size: 70%;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 #panels #BBC {
+    background-image: url(logos/bbc.svg);
     background-color: #090909;
-}
-#panels #BBC::after {
-    content: "";
-    display: block;
-    height: 100%;
-    width: 100%;
-    mask-image: url(logos/bbc.svg);
-    mask-size: 80%;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    -webkit-mask-image: url(logos/bbc.svg);
-    -webkit-mask-size: 80%;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    fill: red;
-    background-color: #fff;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-size: 70%;
 }
 #panels #Wikipedia {
     background-image: url(logos/wikipedia.svg);
     background-color: #ececec;
     background-size: 70%;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 #panels #TheEconomist {
     background-image: url(logos/economist.gif);
     background-color: #f00;
     background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
 }
