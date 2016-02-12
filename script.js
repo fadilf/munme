@@ -23,7 +23,7 @@ $(window).ready(function(){
     });
 
     // Form Submission Handling
-    $("#search").click(function(){
+    $("#search").on("input",function(){
         $("body").removeClass("visible");
         $("#panels").css("top","100%");
     });
